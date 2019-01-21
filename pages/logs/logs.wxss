@@ -1,0 +1,75 @@
+/* pages/logs/logs.wxss */
+
+/* 授权样式starts */
+.header {
+    margin: 90rpx 0 90rpx 50rpx;
+    border-bottom: 1px solid #ccc;
+    text-align: center;
+    width: 650rpx;
+    height: 300rpx;
+    line-height: 450rpx;
+}
+
+.header image {
+    width: 200rpx;
+    height: 200rpx;
+}
+
+.content {
+    margin-left: 50rpx;
+    margin-bottom: 90rpx;
+}
+
+.content text {
+    display: block;
+    color: #9d9d9d;
+    margin-top: 40rpx;
+}
+
+.bottom {
+    border-radius: 80rpx;
+    margin: 70rpx 50rpx;
+    font-size: 35rpx;
+}
+/* 授权样式ends */
+
+
+.avatar {
+  padding: 28rpx 0 15rpx 0;
+  height: 132rpx;
+}
+
+.avatar image {
+  width: 132rpx;
+  height: 132rpx;
+  display: block;
+  margin: 0 auto;
+  border-radius: 50%;
+}
+
+.username {
+  text-align: center;
+}
+
+.order-container {
+  position: relative;
+  overflow: hidden;
+  margin-top: 100rpx;
+}
+
+.my-order {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 40rpx;
+}
+
+.my-order-text::before {
+  content: '123';
+  /* 应该是一个字体图标 */
+  padding-right:10rpx;
+}
+
+.check-all::after {
+  content: '321';
+  padding-left: 10rpx;
+}

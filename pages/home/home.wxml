@@ -1,0 +1,6 @@
+<!--pages/home/home.wxml-->
+<text>pages/home/home.wxml</text>
+
+
+<!-- 这个是首页 主要是用来展示数据 即使用户没有授权登录 也是可以访问这一页的数据的 -->
+<view>all data here !</view>
