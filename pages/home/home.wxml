@@ -1,6 +1,37 @@
 <!--pages/home/home.wxml-->
-<text>pages/home/home.wxml</text>
+<!-- <text>pages/home/home.wxml</text> -->
 
 
 <!-- 这个是首页 主要是用来展示数据 即使用户没有授权登录 也是可以访问这一页的数据的 -->
-<view>all data here !</view>
+<!-- <view>all data here !</view> -->
+
+<!-- Swiper -->
+<swiper class='swiper'
+  indicator-dots="{{indicatorDots}}"
+  autoplay="{{autoplay}}"
+  interval="{{interval}}"
+  duration="{{duration}}"
+  circular="{{circular}}"
+>
+  <block wx:for="{{swiperList}}" wx:key="{{item.id}}">
+    <swiper-item class="swiper-item">
+      <image src="{{item.image}}" class="slide-image" mode='aspectFill' 
+      lazy-load />
+    </swiper-item>
+  </block>
+</swiper>
+
+<!-- Nav -->
+<view class='nav-container'>
+  <view class='nav-item'> 
+    <navigator class='nav-item-single'
+    wx:for="{{navList}}" 
+    wx:key="{{item.id}}"
+    url="/pages/shoplist/shoplist?cateName={{item.name}}&cateId={{item.id}}"
+    >
+      <image src='{{item.icon}}' lazy-load></image>
+      <text class='cate-name'>{{item.name}}</text>
+    </navigator>
+  </view>
+</view>
+

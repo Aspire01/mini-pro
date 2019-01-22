@@ -33,7 +33,7 @@ Page({
               wx.login({
                 success: res => {
                   // 获取到用户的 code 之后：res.code
-                  console.log("用户的code:" + res.code);
+                  // console.log("用户的code:" + res.code);
                   // 可以传给后台，再经过解析获取用户的 openid
                   // 或者可以直接使用微信的提供的接口直接获取 openid ，方法如下：
                   // wx.request({
@@ -108,7 +108,14 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-
+    wx.switchTab({
+      url: './logs',
+      success:function(e){
+        var page = getCurrentPages().pop()
+        if(page == undefined || page == null) return;
+        page.onLoad();
+      }
+    })
   },
 
   /**
