@@ -36,5 +36,13 @@
         "selectedIconPath": "assets/tabs/my-active.png"
       }
     ]
-  }
+  },
+  "networkTimeout": {
+    "request": 10000,
+    "downloadFile": 10000
+  },
+  "debug": true,
+  "navigateToMiniProgramAppIdList":[
+
+  ]
 }
