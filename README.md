@@ -50,7 +50,7 @@ circular="{{circular}}"
 
 ```
 
-```css
+```html
 <！--.wxss-->
 .swiper,
 .swiper-item,
