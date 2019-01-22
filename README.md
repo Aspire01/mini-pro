@@ -51,7 +51,7 @@ circular="{{circular}}"
 ```
 
 ```html
-<！--.wxss-->
+<!--.wxss-->
 .swiper,
 .swiper-item,
 .swiper-item image {
