@@ -33,21 +33,20 @@ wx.switchTab({
 
 ## 轮播实现
 
-```javascript
-swiper组件
-wxml:
-  <swiper class='swiper'
-  indicator-dots="{{indicatorDots}}"
-  autoplay="{{autoplay}}"
-  interval="{{interval}}"
-  duration="{{duration}}"
-  circular="{{circular}}"
- <block wx:for="{{imgUrls}}" wx:key="*this">
-   <swiper-item class="swiper-item">
-     <image src="{{item}}" class="slide-image" mode='aspectFill' />
-   </swiper-item>
- </block>
- <swiper>
+```html
+<!--.wxml-->
+<swiper class='swiper'
+indicator-dots="{{indicatorDots}}"
+autoplay="{{autoplay}}"
+interval="{{interval}}"
+duration="{{duration}}"
+circular="{{circular}}"
+<block wx:for="{{imgUrls}}" wx:key="*this">
+<swiper-item class="swiper-item">
+<image src="{{item}}" class="slide-image" mode='aspectFill' />
+</swiper-item>
+</block>
+<swiper>
 
 ```
 
@@ -56,25 +55,25 @@ wxml:
 .swiper,
 .swiper-item,
 .swiper-item image {
-	width: 100%;
-	height: 390rpx;
+width: 100%;
+height: 390rpx;
 }
 ```
 
 ```javascript
-data{
-    // 本地数据
-   imgUrls: [
-      '../../images/swiper1.jpg',
-      '../../images/swiper2.jpg',
-      '../../images/s.jpeg',
-    ],
-    indicatorDots: true,
-    autoplay: true,
-    interval: 3000,
-    duration: 1000,
-    // 采用衔接滑动
-    circular:true
+data:{
+// 本地数据
+imgUrls: [
+'../../images/swiper1.jpg',
+'../../images/swiper2.jpg',
+'../../images/s.jpeg',
+],
+indicatorDots: true,
+autoplay: true,
+interval: 3000,
+duration: 1000,
+// 采用衔接滑动
+circular:true
 }
 ```
 
@@ -98,7 +97,7 @@ console.log(options)
 
 //动态设置页面标题
 wx.setNavigationBarTitle({
-  title: options.cateName
+title: options.cateName
 })
 ```
 
